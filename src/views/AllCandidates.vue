@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <div class="grey lighten-3 fill-height inPage inPageAlt">
     <v-data-iterator
       :items="candidates"
       :items-per-page.sync="itemsPerPage"
@@ -10,48 +10,45 @@
       hide-default-footer
     >
       <template v-slot:header>
-        <v-toolbar
-          dark
-          color="blue darken-2"
-          class="mb-1"
+        <v-toolbar class="siteTool"
+          color="theme-light"
         >
+        <div class="top-search alt">
           <v-text-field
             v-model="search"
             clearable
             flat
-            solo-inverted
             hide-details
-            prepend-inner-icon="mdi-magnify"
-            label="Search"
+            append-icon="mdi-magnify"
+            placeholder="Search"
           ></v-text-field>
+        </div>
           <template v-if="$vuetify.breakpoint.mdAndUp">
-            <v-spacer></v-spacer>
+            <div class="top-search alt">
             <v-select
               v-model="sortBy"
               flat
-              solo-inverted
               hide-details
               :items="keys"
-              prepend-inner-icon="mdi-magnify"
-              label="Sort by"
+              append-icon="mdi-magnify"
+              placeholder="Sort by"
             ></v-select>
+            </div>
             <v-spacer></v-spacer>
             <v-btn-toggle
               v-model="sortDesc"
               mandatory
             >
               <v-btn
-                large
                 depressed
-                color="blue"
+                color="white"
                 :value="false"
               >
                 <v-icon>mdi-arrow-up</v-icon>
               </v-btn>
               <v-btn
-                large
                 depressed
-                color="blue"
+                color="white"
                 :value="true"
               >
                 <v-icon>mdi-arrow-down</v-icon>
@@ -62,6 +59,7 @@
       </template>
 
       <template v-slot:default="props">
+        <perfect-scrollbar class="canList">
         <v-row>
           <v-col
             v-for="item in props.items"
@@ -101,10 +99,11 @@
             </v-card>
           </v-col>
         </v-row>
+        </perfect-scrollbar>
       </template>
 
       <template v-slot:footer>
-        <v-row class="mt-2" align="center" justify="center">
+        <v-row class="tableFoot" align="center" justify="center">
           <span class="grey--text">Items per page</span>
           <v-menu offset-y>
             <template v-slot:activator="{ on, attrs }">
@@ -162,7 +161,7 @@
         </v-row>
       </template>
     </v-data-iterator>
-  </v-container>
+  </div>
 </template>
 
 <script>

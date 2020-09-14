@@ -1,6 +1,6 @@
 <template>
+<perfect-scrollbar class="pageScroll">
 <div class="grey lighten-3 fill-height inPage">
-
   <v-row>
     <v-col lg="3" md="3">
       <div class="secUplod">
@@ -77,31 +77,31 @@
                     <td>Manuel J. Phillips</td>
                     <td>phillips@gmail.com</td>
                     <td>+91 5658945236</td>
-                    <td>Delete</td>
+                    <td class="text-center"><v-icon>mdi-delete</v-icon></td>
                   </tr>
                   <tr>
                     <td>Manuel J. Phillips</td>
                     <td>phillips@gmail.com</td>
                     <td>+91 5658945236</td>
-                    <td>Delete</td>
+                    <td class="text-center"><v-icon>mdi-delete</v-icon></td>
                   </tr>
                   <tr>
                     <td>Manuel J. Phillips</td>
                     <td>phillips@gmail.com</td>
                     <td>+91 5658945236</td>
-                    <td>Delete</td>
+                    <td class="text-center"><v-icon>mdi-delete</v-icon></td>
                   </tr>
                   <tr>
                     <td>Manuel J. Phillips</td>
                     <td>phillips@gmail.com</td>
                     <td>+91 5658945236</td>
-                    <td>Delete</td>
+                    <td class="text-center"><v-icon>mdi-delete</v-icon></td>
                   </tr>
                   <tr>
                     <td>Manuel J. Phillips</td>
                     <td>phillips@gmail.com</td>
                     <td>+91 5658945236</td>
-                    <td>Delete</td>
+                    <td class="text-center"><v-icon>mdi-delete</v-icon></td>
                   </tr>
                 </table>
               </div>
@@ -234,6 +234,7 @@
     </v-col>
   </v-row>
 </div>
+</perfect-scrollbar>
 </template>
 
 <script>
