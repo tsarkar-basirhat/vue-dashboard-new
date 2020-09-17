@@ -63,7 +63,7 @@
       <!-- <v-card-subtitle class="text-center pt-0" v-if="!loading"><v-icon size="medium">mdi-account-box</v-icon> {{currentCandidate.phone}}<span v-show="currentCandidate.email">, {{currentCandidate.email}}</span></v-card-subtitle>
       <v-card-subtitle class="text-center pt-0" v-if="!loading"><v-icon size="medium">mdi-card-account-details</v-icon> {{currentCandidate.uid}}</v-card-subtitle> -->
       <div justify="space-around" class="mb-5" v-if="!loading">
-          <v-btn
+          <!-- <v-btn
             color="blue"
             class="white--text"
             v-if="currentCandidate.resume"
@@ -71,7 +71,7 @@
           >
             Resume
             <v-icon> mdi-download </v-icon>
-          </v-btn>
+          </v-btn> -->
       </div>
       <div class="noTes block-pad">
         <p><span>NOTES</span></p>
@@ -92,10 +92,10 @@
       </div>
       <div class="btnBlock block-pad">
         <v-row>
-          <v-col lg="6" md="6"><a href="">Resume</a></v-col>
-          <v-col lg="6" md="6"><a class="btnSc" href="">Schedule</a></v-col>
-          <v-col lg="6" md="6"><a class="btnDq" href="">Disqualify</a></v-col>
-          <v-col lg="6" md="6"><a class="btnAf" href="">Assess Further</a></v-col>
+          <v-col lg="6" md="6" v-if="currentCandidate.resume"><a @click="downloadWithAxios(currentCandidate.resume)">Resume</a></v-col>
+          <v-col lg="6" md="6"><a class="btnSc">Schedule</a></v-col>
+          <v-col lg="6" md="6"><a class="btnDq">Disqualify</a></v-col>
+          <v-col lg="6" md="6"><a class="btnAf">Assess Further</a></v-col>
         </v-row>
       </div>
       <div class="sec-files block-pad">

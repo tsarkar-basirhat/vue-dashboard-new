@@ -32,7 +32,7 @@
             <div class="addCandidate-main">
               <div class="addIco"><img src="../assets/images/pls-ico.svg" alt=""></div>
             <v-row class="modified alt">
-              <v-col lg="4">
+              <v-col lg="6">
                 <v-text-field
                 v-model="candidate.name"
                 label="Name"
@@ -41,7 +41,7 @@
                 required
               ></v-text-field>
               </v-col>
-              <v-col lg="4">
+              <v-col lg="6">
                 <v-text-field
                 v-model="candidate.phone"
                 label="Phone"
@@ -51,7 +51,7 @@
                 required
               ></v-text-field>
               </v-col>
-              <v-col lg="4">
+              <v-col lg="6">
                 <v-text-field
                 v-model="candidate.email"
                 :rules="emailRules"
@@ -60,41 +60,42 @@
                 required
               ></v-text-field>
               </v-col>
-              <!-- <v-col lg="3">
+              <v-col lg="6">
                 <v-select
                 v-model="candidate.jobId"
                 :items="getPositions"
                 label="Applying Position"
+                placeholder="Select Position Here"
                 multiple
               ></v-select>
-              </v-col> -->
+              </v-col>
               </v-row>
               </div>
               <div class="candidateList">
                 <h2>Candidate List</h2>
                 <table class="table">
                   <tr>
-                    <td>Manuel J. Phillips</td>
-                    <td>phillips@gmail.com</td>
-                    <td>+91 5658945236</td>
+                    <td>MKevin R. Hunter</td>
+                    <td>kevinrhunter@gmail.com</td>
+                    <td>+91 417-567-4646</td>
                     <td class="text-center"><v-icon>mdi-delete</v-icon></td>
                   </tr>
                   <tr>
-                    <td>Manuel J. Phillips</td>
-                    <td>phillips@gmail.com</td>
-                    <td>+91 5658945236</td>
+                    <td>Brent J. Gibson</td>
+                    <td>brentjgibson@gmail.com</td>
+                    <td>+95 231-437-6129</td>
                     <td class="text-center"><v-icon>mdi-delete</v-icon></td>
                   </tr>
                   <tr>
-                    <td>Manuel J. Phillips</td>
-                    <td>phillips@gmail.com</td>
-                    <td>+91 5658945236</td>
+                    <td>Sommer R. Dawson</td>
+                    <td>sommerrdawson@teleworm.us</td>
+                    <td>+91 703-438-2680</td>
                     <td class="text-center"><v-icon>mdi-delete</v-icon></td>
                   </tr>
                   <tr>
-                    <td>Manuel J. Phillips</td>
-                    <td>phillips@gmail.com</td>
-                    <td>+91 5658945236</td>
+                    <td>Anthony R. Nichols</td>
+                    <td>anthonyrnichols@armyspy.com</td>
+                    <td>+91 570-885-0632</td>
                     <td class="text-center"><v-icon>mdi-delete</v-icon></td>
                   </tr>
                   <tr>
